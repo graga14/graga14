@@ -1,21 +1,31 @@
-MIT License
+# Coin Master automation script
+## Introduction
+Coin Master is great game however, game animation is very annoy because it took time to finish, sometime I need to spin and do action as fast as I wish to avoid other player steal my money, or Sometime I have couple thounsand of spins and i want to spin them all but I don't want to hold the phone for an hours. Everything is easy, lets automate it
 
-Copyright (c) 2020 graga14
+this program will automate spin, attack, raid (work with bug) and auto collect rewards, dailly reward, upgrade building, pretty much everything you need to do when you play game.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Setup
+create .env file in the and setup below property. see sample.env file for details
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- USER_ID=xxx
+- FB_TOKEN=xxx
+- DEVICE_ID=xxx
+- DEVICE_CHANGE=20191002_2
+- AUTH_TOKEN=authenticate token expired in 12h
+
+To get above information, You need to follow below step
+- Login to the game using FB
+- Using network tab in inspect mode(F11) of chrome browser
+- Wait until game load and start check in the network and find the request to coin master
+- All above information will be in the body and header of the request
+
+## run
+
+```sh 
+npm install //for first use no package module
+node index.js
+
+```
+
+
